@@ -41,11 +41,6 @@ const adminPaths = [
         path: "create-student",
         element: <CreateStudent />,
       },
-      {
-        name: "Create Member",
-        path: "create-member",
-        element: <CreateStudent />,
-      },
     ],
   },
 ];
@@ -100,3 +95,37 @@ export const adminSidebarItems = adminPaths.reduce(
   },
   []
 );
+
+//******************************************************************************** */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// const items = [
+//   {
+//     key: "dashboard",
+//     label: "Dashboard",
+//   },
+//   {
+//     key: "user-management",
+//     label: "User Management",
+//     children: [
+//       { key: "create-admin", label: "Create Admin" },
+//       { key: "create-faculty", label: "Create Faculty" },
+//       { key: "create-student", label: "Create Student" },
+//     ],
+//   },
+// ];
+// const routes = [
+//   { path: "dashboard", element: "<AdminDashboard />" },
+//   { index: true, element: "<AdminDashboard />" },
+//   {
+//     path: "create-admin",
+//     element: "<CreateAdmin/>",
+//   },
+//   {
+//     path: "create-faculty",
+//     element: "<CreateFaculty/>",
+//   },
+//   {
+//     path: "create-student",
+//     element: "<CreateStudent/>",
+//   },
+// ];
