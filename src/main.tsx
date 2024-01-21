@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from "sonner";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <PersistGate loading={null} persistor={persistor}>
         <RouterProvider router={router} />
       </PersistGate>
+      <Toaster duration={2000} />
     </Provider>
   </React.StrictMode>
 );
