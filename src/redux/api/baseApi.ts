@@ -36,7 +36,7 @@ const baseQueryWithRefreshToken: BaseQueryFn<
     });
     const data = await res.json();
 
-    // If no access token then logout the user
+    // If no access token then logout the user (Thats mean access token in cooke expired)
     if (!data?.data?.accessToken) api.dispatch(logOut());
 
     // Decode the access Token
