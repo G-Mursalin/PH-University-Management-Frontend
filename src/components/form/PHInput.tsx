@@ -8,7 +8,7 @@ type TInputProps = {
 
 function PHInput({ type, name, label }: TInputProps) {
   return (
-    <div style={{ marginBottom: "20px" }}>
+    <div>
       <Controller
         name={name}
         render={({ field }) => (

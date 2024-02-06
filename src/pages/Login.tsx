@@ -12,7 +12,7 @@ import { useLoginMutation } from "../redux/features/auth/authApi";
 function Login() {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const [login, { error }] = useLoginMutation();
+  const [login] = useLoginMutation();
 
   const defaultValues = { id: "A-0001", password: "123456" };
 
