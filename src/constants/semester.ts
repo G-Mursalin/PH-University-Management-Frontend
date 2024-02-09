@@ -10,3 +10,9 @@ export const semesterRegistrationYearsOptions = [0, 1, 2, 3, 4].map(
     label: String(new Date().getFullYear() + number),
   })
 );
+
+export const semesterStatusOptions = [
+  { value: "UPCOMING", label: "Upcoming" },
+  { value: "ONGOING", label: "Ongoing" },
+  { value: "ENDED", label: "Ended" },
+];

@@ -4,3 +4,4 @@ export * from "./successResponse.types";
 export * from "./queryParam.type";
 export * from "./userManagement.type";
 export * from "./academicManagement.types";
+export * from "./courseManagement.type";
