@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: (
-      <ProtectedRoute>
+      <ProtectedRoute role="admin">
         <App />
       </ProtectedRoute>
     ),
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
   {
     path: "/faculty",
     element: (
-      <ProtectedRoute>
+      <ProtectedRoute role="faculty">
         <App />
       </ProtectedRoute>
     ),
@@ -38,13 +38,12 @@ const router = createBrowserRouter([
   {
     path: "/student",
     element: (
-      <ProtectedRoute>
+      <ProtectedRoute role="student">
         <App />
       </ProtectedRoute>
     ),
     children: routesGenerator(studentPaths),
   },
-
   {
     path: "/login",
     element: <Login />,

@@ -4,16 +4,23 @@ type TInputProps = {
   type: string;
   name: string;
   label?: string;
+  disabled?: boolean;
 };
 
-function PHInput({ type, name, label }: TInputProps) {
+function PHInput({ type, name, label, disabled }: TInputProps) {
   return (
     <div>
       <Controller
         name={name}
         render={({ field }) => (
           <Form.Item label={label}>
-            <Input {...field} type={type} id={name} size="large" />
+            <Input
+              {...field}
+              type={type}
+              id={name}
+              size="large"
+              disabled={disabled}
+            />
           </Form.Item>
         )}
       />

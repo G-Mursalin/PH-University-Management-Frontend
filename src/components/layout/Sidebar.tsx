@@ -4,7 +4,8 @@ import { adminPaths } from "../../routes/admin.routes";
 import { facultyPaths } from "../../routes/faculty.routes";
 import { studentPaths } from "../../routes/student.routes";
 import { useAppSelector } from "../../redux/hooks";
-import { selectCurrentUser } from "../../redux/features/auth/authSlice";
+import { TUser, selectCurrentToken } from "../../redux/features/auth/authSlice";
+import { verifyToken } from "../../utils/verifyToken";
 const { Sider } = Layout;
 
 const userRole = {
@@ -14,8 +15,11 @@ const userRole = {
 };
 
 function Sidebar() {
-  // Set sidebars items based on role
-  const user = useAppSelector(selectCurrentUser);
+  const token = useAppSelector(selectCurrentToken);
+  let user;
+  if (token) {
+    user = verifyToken(token) as TUser;
+  }
   let sideBarItems;
 
   switch (user!.role) {
