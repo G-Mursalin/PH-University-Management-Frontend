@@ -1,4 +1,4 @@
-import { TAcademicSemester } from ".";
+import { TAcademicSemester, TFaculty } from ".";
 
 export type TSemester = {
   _id: string;
@@ -20,4 +20,10 @@ export type TCourse = {
   credits: number;
   preRequisiteCourses: { course: string | null; isDeleted: boolean }[];
   isDeleted: boolean;
+};
+
+export type TCourseFaculties = {
+  _id: string;
+  course: string;
+  faculties: TFaculty[];
 };

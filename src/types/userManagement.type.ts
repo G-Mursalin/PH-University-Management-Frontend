@@ -1,6 +1,6 @@
 import { TAcademicDepartment, TAcademicFaculty, TAcademicSemester } from ".";
 
-export interface TStudent {
+export type TStudent = {
   _id: string;
   id: string;
   user: TUser;
@@ -21,7 +21,30 @@ export interface TStudent {
   academicDepartment: TAcademicDepartment;
   academicFaculty: TAcademicFaculty;
   fullName: string;
-}
+};
+
+export type TFaculty = {
+  _id: string;
+  id: string;
+  user: string;
+  designation: string;
+  name: TName;
+  gender: string;
+  dateOfBirth: string;
+  email: string;
+  contactNo: string;
+  emergencyContactNo: string;
+  bloodGroup: string;
+  presentAddress: string;
+  permanentAddress: string;
+  profileImage: string;
+  academicFaculty: string;
+  academicDepartment: string;
+  isDeleted: boolean;
+  createdAt: string;
+  updatedAt: string;
+  fullName: string;
+};
 
 export type TUser = {
   _id: string;

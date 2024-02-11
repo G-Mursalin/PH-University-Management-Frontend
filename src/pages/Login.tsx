@@ -22,6 +22,8 @@ function Login() {
     try {
       const res = await login(data).unwrap();
 
+      // Check if user need to change password
+
       // Decode the access Token
       const user = verifyToken(res.data.accessToken) as TUser;
 
