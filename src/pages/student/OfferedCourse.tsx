@@ -15,7 +15,7 @@ const OfferedCourse = () => {
 
   const singleObject = offeredCourseData?.data?.reduce((acc: TCourse, item) => {
     const key = item.course.title;
-    acc[key] = acc[key] || { courseTitle: key, sections: [] };
+    if (!acc[key]) acc[key] = { courseTitle: key, sections: [] };
     acc[key].sections.push({
       section: item.section,
       _id: item._id,
